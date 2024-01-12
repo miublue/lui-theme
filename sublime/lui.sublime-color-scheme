@@ -1,0 +1,144 @@
+{
+	"name": "Lui",
+	"variables": {
+		"foreground": "#e7eaef",
+		"background": "#171a1f",
+		"highlight":  "#272a2f",
+		"comment":    "#777a7f",
+
+		"keyword":    "#5599ff",
+		"function":   "#72ddf7",
+		"constant":   "#ef476f",
+		"string":     "#ef476f",
+	},
+	"globals": {
+		"background":     "var(background)",
+		"selection":      "var(highlight)",
+		"foreground":     "var(foreground)",
+		"caret":          "var(keyword)",
+		"fold_marker":    "var(keyword)",
+
+		"line_highlight": "var(background)",
+		"gutter": "var(background)",
+		"gutter_foreground": "var(comment)",
+		"gutter_foreground_highlight": "var(constant)",
+	},
+	"rules": [
+		{
+			"name": "text",
+			"scope": "text, source",
+			"foreground": "var(foreground)",
+		},
+		{
+			"name": "Comment",
+			"scope": "comment",
+			"foreground": "var(comment)",
+			"font_style": "italic",
+		},
+		{
+			"name": "String",
+			"scope": "string",
+			"foreground": "var(string)",
+		},
+		{
+			"name": "Constant",
+			"scope": "constant",
+			"foreground": "var(constant)"
+		},
+		{
+			"name": "Escape characters Constant",
+			"scope": "constant.character, constant.other",
+			"foreground": "var(keyword)",
+		},
+		{
+			"name": "Constant",
+			"scope": "punctuation.accessor, punctuation.other, keyword.operator",
+			"foreground": "var(keyword)",
+		},
+		{
+			"name": "Markup",
+			"scope": "markup",
+			"foreground": "var(function)",
+		},
+		{
+			"name": "Markup Heading",
+			"scope": "markup.heading, markup.raw, markup.quote",
+			"foreground": "var(keyword)",
+			"font_style": "bold",
+		},
+		{
+			"name": "Markup Bold",
+			"scope": "markup.bold",
+			"foreground": "var(function)",
+			"font_style": "bold",
+		},
+		{
+			"name": "Markup Italic",
+			"scope": "markup.italic",
+			"foreground": "var(function)",
+			"font_style": "italic",
+		},
+		{
+			"name": "Markup Underline",
+			"scope": "markup.underline",
+			"foreground": "var(function)",
+			"font_style": "italic underline",
+		},
+		{
+			"name": "Markup List",
+			"scope": "markup.list, markup.other",
+			"foreground": "var(keyword)",
+		},
+		{
+			"name": "Keyword",
+			"scope": "keyword",
+			"foreground": "var(keyword)",
+		},
+		{
+			"name": "Storage",
+			"scope": "storage",
+			"foreground": "var(keyword)",
+		},
+		{
+			"name": "Variable",
+			"scope": "variable",
+			"foreground": "var(foreground)",
+		},
+		{
+			"name": "Variable Language",
+			"scope": "variable.language",
+			"foreground": "var(keyword)",
+		},
+		{
+			"name": "Variable Function",
+			"scope": "variable.function",
+			"foreground": "var(function)",
+		},
+		{
+			"name": "Function Name",
+			"scope": "entity.name.function",
+			"foreground": "var(function)",
+		},
+		{
+			"name": "Class Name",
+			"scope": "entity.name.class",
+			"foreground": "var(function)",
+		},
+		{
+			"name": "Library",
+			"scope": "support",
+			"foreground": "var(keyword)",
+		},
+		{
+			"name": "Library Functions",
+			"scope": "support.function",
+			"foreground": "var(function)",
+		},
+		{
+			"name": "Invalid",
+			"scope": "invalid",
+			"background": "var(function)",
+			"foreground": "var(background)",
+		},
+	]
+}

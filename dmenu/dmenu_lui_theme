@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+# ~source this file from dmenu scripts~
+
+PROMPT='Run: '
+FONT='iosevka-9'
+NORMAL_BG='#171a1f'
+NORMAL_FG='#e7eaef'
+SELECT_BG='#5599ff'
+SELECT_FG='#171a1f'

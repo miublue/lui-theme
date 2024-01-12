@@ -1,0 +1,53 @@
+# Lui Colors:
+
+normal_black   = #171a1f
+normal_red     = #ef476f
+normal_green   = #72ddf7
+normal_yellow  = #f7dd72
+normal_blue    = #5599ff
+normal_magenta = #ef476f
+normal_cyan    = #72ddf7
+normal_grey    = #777a7f
+
+bright_black   = #272a2f
+bright_red     = #ef476f
+bright_green   = #72ddf7
+bright_yellow  = #f7dd72
+bright_blue    = #5599ff
+bright_magenta = #ef476f
+bright_cyan    = #72ddf7
+bright_grey    = #e7eaef
+
+# Editor Theme:
+
+background = normal_black
+foreground = bright_grey
+selection  = bright_black
+comments   = normal_grey
+
+keywords   = normal_blue
+datatypes  = normal_blue
+functions  = normal_cyan
+classes    = normal_cyan
+constants  = normal_red
+strings    = normal_magenta
+
+# Ui Theme:
+
+line_numbers         = normal_grey
+selected_line_number = normal_red
+
+any_background       = normal_black
+any_button           = bright_black
+statusbar            = bright_black
+
+any_error            = normal_red bold
+any_warn             = normal_yellow
+
+diff_remove          = normal_red
+diff_modified        = normal_yellow
+diff_added           = normal_green
+
+# I was playing around with some thingies and this theme looks quite good with
+# font      = Iosevka
+# GTK_theme = Kripton

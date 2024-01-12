@@ -1,0 +1,36 @@
+{
+    "name": "lui",
+    "comment": "да",
+    "background-color": "#171a1f",
+    "badge-color": "#e7eaef",
+    "bold-color": "#e7eaef",
+    "cursor-background-color": "#5599ff",
+    "cursor-foreground-color": "#5599ff",
+    "foreground-color": "#e7eaef",
+    "highlight-background-color": "#171a1f",
+    "highlight-foreground-color": "#e7eaef",
+    "palette": [
+        "#171a1f",
+        "#EF476F",
+        "#72DCF7",
+        "#F7DD72",
+        "#5599ff",
+        "#EF476F",
+        "#72DCF7",
+        "#777a7f",
+
+        "#272a2f",
+        "#EF476F",
+        "#72DCF7",
+        "#F7DD72",
+        "#5599ff",
+        "#EF476F",
+        "#72DCF7",
+        "#e7eaef"
+    ],
+    "use-badge-color": false,
+    "use-bold-color": false,
+    "use-cursor-color": false,
+    "use-highlight-color": false,
+    "use-theme-colors": false
+}

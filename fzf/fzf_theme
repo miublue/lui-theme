@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+alias fzf="fzf --color='bg:#171a1f,bg+:#171a1f,info:#5599ff,border:#5599ff,spinner:#5599ff' \
+		--color='hl:#5599ff,hl+:#5599ff,fg:#ecf0f4,fg+:#ef476f,header:#5599ff' \
+		--color='pointer:#5599ff,marker:#5599ff,prompt:#5599ff'"

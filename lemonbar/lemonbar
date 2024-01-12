@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+SIZE="size=10"
+FONTS="-f iosevka:$SIZE -f KosugiMaru:$SIZE -f MonoColorEmoji:$SIZE"
+LEMONBAR="$HOME/.config/lemonbar/config.sh"
+
+BASEFLAGS="-p -d -g x18 -n bar"
+BASECOLORS="-F#e7eaef -B#171a1f -U#5599ff"
+
+exec $LEMONBAR | lemonbar $BASEFLAGS $BASECOLORS $FONTS
