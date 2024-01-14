@@ -3,11 +3,14 @@ syntax reset
 let g:colors_name = "lui"
 set background=dark
 set t_Co=256
-hi Normal guifg=#e7eaef ctermbg=NONE guibg=#171a1f gui=NONE
+
+let s:background_color = get(g:, 'transparent_background', 0) == 0 ? '#171a1f' : 'NONE'
+exec 'hi Normal gui=NONE guifg=#e7eaef ctermbg=NONE guibg=' . s:background_color
 
 hi ColorColumn guifg=NONE guibg=#272a2f
 hi DiffText guifg=#72ddf7 guibg=NONE
 hi ErrorMsg guifg=#ef476f guibg=NONE
+hi Folded guifg=#ef476f guibg=#272a2f
 hi WarningMsg guifg=#72ddf7 guibg=NONE
 hi PreProc guifg=#72ddf7 guibg=NONE
 hi Exception guifg=#5599ff guibg=NONE
@@ -19,7 +22,6 @@ hi cssIdentifier guifg=#72ddf7 guibg=NONE
 hi cssImportant guifg=#72ddf7 guibg=NONE
 hi Type guifg=#5599ff guibg=NONE
 hi Identifier guifg=#5599ff guibg=NONE
-hi PMenuSel guifg=#5599ff guibg=NONE
 hi Constant guifg=#5599ff guibg=NONE
 hi Repeat guifg=#5599ff guibg=NONE
 hi DiffAdd guifg=#5599ff guibg=NONE
@@ -59,15 +61,15 @@ hi Statement guifg=#5599ff guibg=NONE
 hi Operator guifg=#5599ff guibg=NONE
 hi cssAttr guifg=#5599ff guibg=NONE
 
-
 hi Pmenu guifg=#e7eaef guibg=#272a2f
-hi SignColumn guibg=#171a1f
+hi PMenuSel guifg=#5599ff guibg=#272a2f
+exec 'hi SignColumn            guibg=' . s:background_color
+exec 'hi LineNr guifg=#777a7f  guibg=' . s:background_color
+exec 'hi NonText guifg=#777a7f guibg=' . s:background_color
+exec 'hi CursorLine cterm=NONE guibg=' . s:background_color
 hi Title guifg=#e7eaef
-hi LineNr guifg=#777a7f guibg=#171a1f
-hi NonText guifg=#777a7f guibg=#171a1f
 hi Comment guifg=#777a7f gui=italic
 hi SpecialComment guifg=#777a7f gui=italic guibg=NONE
-hi CursorLine cterm=NONE guibg=#171a1f
 hi TabLineFill gui=NONE guibg=#272a2f
 hi TabLine guifg=#ef476f guibg=#272a2f gui=NONE
 hi StatusLine gui=NONE guibg=#272a2f guifg=#e7eaef
