@@ -4,14 +4,15 @@ BG='171a1f'
 FG='e7eaef'
 UP='72ddf7'
 DN='ef476f'
+YL='f7dd72'
 
 Workspace(){
-	echo -n "%{F-}[%{F#$DN}$(xdotool get_desktop)%{F-}]"
+	echo -n "%{!u}%{U#$DN}  %{F-}$(xdotool get_desktop)  %{!u}%{U-}"
 }
 
 Window(){
 	WN=$(xdotool getwindowfocus)
-	[[ ! -z $WN ]] && echo -e "%{F-}$(xdotool getwindowname $WN)"
+	[[ ! -z $WN ]] && echo -e "$(xdotool getwindowname $WN)"
 }
 
 Sound(){
@@ -19,24 +20,24 @@ Sound(){
 	NOTMUTED=$($MIX | grep "\[on\]")
 	if [[ ! -z $NOTMUTED ]] ; then
 		VOL=$($MIX | grep 'Left:' | awk -F'[][]' '{ print $2 }')
-		echo -e "♫ %{F#$UP}${VOL}%{F-}"
+		echo -e "${VOL}"
 	else
-		echo -e "♫ %{F#$DN}${VOL}%{F-}"
+		echo -e "%{F#$DN}${VOL}%{F-}"
 	fi
 }
 
 Memory(){
-	echo -e "☭ %{F#$UP}$(free --si -h | grep 'Mem:' | awk '{ printf "%s/%s", $3, $2 }')%{F-}"
+	echo -e "$(free --si -h | grep 'Mem:' | awk '{ printf "%s/%s", $3, $2 }')"
 }
 
 Clock(){
 	TIME=$(date "+%m-%d %H:%M")
-	echo -e -n "◷ %{F#$UP}${TIME}%{F-}"
+	echo -e -n "$TIME"
 }
 
 while true; do
     echo -n "%{F-}%{l}$(Workspace)"
     echo -n "%{F-}%{c}$(Window)"
-    echo -e "%{r}$(Sound) ┆ $(Memory) ┆ $(Clock) "
+    echo -e "%{r}%{!u}%{U#$UP} $(Sound) %{!u} %{!u}%{U#$YL} $(Memory) %{!u} %{!u}%{U#$DN} $(Clock) %{!u}%{U-}"
 	sleep 0.1s
 done
